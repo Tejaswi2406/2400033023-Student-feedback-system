@@ -1,0 +1,22 @@
+.feedback-list {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.feedback-list h2 {
+  margin-bottom: 1rem;
+}
+.feedback-list ul {
+  list-style: none;
+  padding: 0;
+}
+.feedback-list li {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
