@@ -1,0 +1,29 @@
+.view-results {
+  padding: 1rem;
+}
+
+.view-results table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-results th {
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #ddd;
+}
+
+.view-results td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.view-results tr:hover {
+  background-color: #f9f9f9;
+}

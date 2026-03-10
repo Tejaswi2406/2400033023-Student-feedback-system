@@ -1,4 +1,5 @@
 import React from 'react';
+import './MyFeedback.css';
 
 function MyFeedback({ feedbacks }) {
   return (
@@ -10,9 +11,10 @@ function MyFeedback({ feedbacks }) {
         <ul>
           {feedbacks.map((fb, idx) => (
             <li key={idx}>
-              <strong>{fb.course}</strong> - Overall: {fb.overall}★<br />
-              Content: {fb.content}★, Teaching Methodology: {fb.teachingMethodology}★, Doubt Clarification: {fb.doubtClarification}★<br />
-              Comments: {fb.comments}
+              <strong>{fb.course}</strong>
+              <div className="rating-row">Overall: {fb.overall}★</div>
+              <div className="rating-row">Content: {fb.content}★ | Teaching Methodology: {fb.teachingMethodology}★ | Doubt Clarification: {fb.doubtClarification}★</div>
+              <div className="comments">Comments: {fb.comments}</div>
             </li>
           ))}
         </ul>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './ViewResults.css';
 
 function ViewResults({ results }) {
   return (
