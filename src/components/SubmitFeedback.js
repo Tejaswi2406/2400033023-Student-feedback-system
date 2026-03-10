@@ -6,19 +6,19 @@ function SubmitFeedback({ onSubmit }) {
   const [course, setCourse] = useState('');
   const [overall, setOverall] = useState(0);
   const [content, setContent] = useState(0);
-  const [instructor, setInstructor] = useState(0);
-  const [facilities, setFacilities] = useState(0);
+  const [teachingMethodology, setTeachingMethodology] = useState(0);
+  const [doubtClarification, setDoubtClarification] = useState(0);
   const [comments, setComments] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (course && overall && content && instructor && facilities) {
-      onSubmit({ course, overall, content, instructor, facilities, comments });
+    if (course && overall && content && teachingMethodology && doubtClarification) {
+      onSubmit({ course, overall, content, teachingMethodology, doubtClarification, comments });
       setCourse('');
       setOverall(0);
       setContent(0);
-      setInstructor(0);
-      setFacilities(0);
+      setTeachingMethodology(0);
+      setDoubtClarification(0);
       setComments('');
     }
   };
@@ -32,10 +32,10 @@ function SubmitFeedback({ onSubmit }) {
       <StarRating value={overall} onChange={setOverall} />
       <label>Course Content</label>
       <StarRating value={content} onChange={setContent} />
-      <label>Instructor Quality</label>
-      <StarRating value={instructor} onChange={setInstructor} />
-      <label>Facilities & Resources</label>
-      <StarRating value={facilities} onChange={setFacilities} />
+      <label>Teaching Methodology</label>
+      <StarRating value={teachingMethodology} onChange={setTeachingMethodology} />
+      <label>Doubt Clarification</label>
+      <StarRating value={doubtClarification} onChange={setDoubtClarification} />
       <label>Additional Comments</label>
       <textarea value={comments} onChange={e => setComments(e.target.value)} placeholder="Enter comments..." />
       <button type="submit">Submit</button>

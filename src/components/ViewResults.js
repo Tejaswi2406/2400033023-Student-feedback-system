@@ -13,8 +13,8 @@ function ViewResults({ results }) {
               <th>Course</th>
               <th>Overall</th>
               <th>Content</th>
-              <th>Instructor</th>
-              <th>Facilities</th>
+              <th>Teaching Methodology</th>
+              <th>Doubt Clarification</th>
             </tr>
           </thead>
           <tbody>
@@ -23,8 +23,8 @@ function ViewResults({ results }) {
                 <td>{r.course}</td>
                 <td>{r.overall.toFixed(1)}★</td>
                 <td>{r.content.toFixed(1)}★</td>
-                <td>{r.instructor.toFixed(1)}★</td>
-                <td>{r.facilities.toFixed(1)}★</td>
+                <td>{r.teachingMethodology.toFixed(1)}★</td>
+                <td>{r.doubtClarification.toFixed(1)}★</td>
               </tr>
             ))}
           </tbody>

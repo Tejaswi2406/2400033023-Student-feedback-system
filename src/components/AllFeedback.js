@@ -14,8 +14,8 @@ function AllFeedback({ feedbacks }) {
               <th>Student</th>
               <th>Overall</th>
               <th>Content</th>
-              <th>Instructor</th>
-              <th>Facilities</th>
+              <th>Teaching Methodology</th>
+              <th>Doubt Clarification</th>
               <th>Comments</th>
             </tr>
           </thead>
@@ -26,8 +26,8 @@ function AllFeedback({ feedbacks }) {
                 <td>{fb.student || 'Anonymous'}</td>
                 <td>{fb.overall}★</td>
                 <td>{fb.content}★</td>
-                <td>{fb.instructor}★</td>
-                <td>{fb.facilities}★</td>
+                <td>{fb.teachingMethodology}★</td>
+                 <td>{fb.doubtClarification}★</td>
                 <td>{fb.comments}</td>
               </tr>
             ))}

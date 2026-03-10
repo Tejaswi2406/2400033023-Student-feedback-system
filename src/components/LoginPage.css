@@ -71,6 +71,27 @@
   box-sizing: border-box;
 }
 
+/* extra field shown when teacher role selected */
+.subject-input {
+  margin-bottom: 1rem;
+}
+.subject-input label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #333;
+}
+.subject-input input,
+.subject-input select {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
 .sign-in-btn {
   width: 100%;
   padding: 0.75rem;

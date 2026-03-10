@@ -14,12 +14,24 @@ function Sidebar({ role, active, onNavigate }) {
     { key: 'reports', label: 'Course Reports' },
     { key: 'insights', label: 'Insights' },
   ];
-  const links = role === 'admin' ? adminLinks : studentLinks;
+  const teacherLinks = [
+    { key: 'dashboard', label: 'Dashboard' },
+    { key: 'allfeedback', label: 'My Course Feedback' },
+  ];
+  // include logout at end of all link sets
+  const links =
+    role === 'admin' ? adminLinks : role === 'teacher' ? teacherLinks : studentLinks;
+  const allLinks = [...links, { key: 'logout', label: 'Logout', logout: true }];
+
   return (
     <nav className="sidebar">
       <ul>
-        {links.map(link => (
-          <li key={link.key} className={active === link.key ? 'active' : ''} onClick={() => onNavigate(link.key)}>
+        {allLinks.map(link => (
+          <li
+            key={link.key}
+            className={(active === link.key ? 'active ' : '') + (link.logout ? 'logout' : '')}
+            onClick={() => onNavigate(link.key)}
+          >
             {link.label}
           </li>
         ))}

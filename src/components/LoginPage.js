@@ -1,14 +1,23 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
+import CourseDropdown from './CourseDropdown';
 
 function LoginPage({ onLogin }) {
   const [role, setRole] = useState('student');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [subject, setSubject] = useState('');
+
+  React.useEffect(() => {
+    if (role !== 'teacher') {
+      setSubject('');
+    }
+  }, [role]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onLogin({ role, email, password });
+    // pass subject only when teacher
+    onLogin({ role, email, password, subject: role === 'teacher' ? subject : undefined });
   };
 
   return (
@@ -20,8 +29,15 @@ function LoginPage({ onLogin }) {
           <div className="role-buttons">
             <button type="button" className={role === 'student' ? 'active' : ''} onClick={() => setRole('student')}>Student</button>
             <button type="button" className={role === 'admin' ? 'active' : ''} onClick={() => setRole('admin')}>Admin</button>
+            <button type="button" className={role === 'teacher' ? 'active' : ''} onClick={() => setRole('teacher')}>Teacher</button>
           </div>
         </div>
+        {role === 'teacher' && (
+          <div className="subject-input">
+            <label>Subject/Course</label>
+            <CourseDropdown value={subject} onChange={setSubject} />
+          </div>
+        )}
         <label>Email Address</label>
         <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="Enter your email" required />
         <label>Password</label>

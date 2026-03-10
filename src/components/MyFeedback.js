@@ -11,7 +11,7 @@ function MyFeedback({ feedbacks }) {
           {feedbacks.map((fb, idx) => (
             <li key={idx}>
               <strong>{fb.course}</strong> - Overall: {fb.overall}★<br />
-              Content: {fb.content}★, Instructor: {fb.instructor}★, Facilities: {fb.facilities}★<br />
+              Content: {fb.content}★, Teaching Methodology: {fb.teachingMethodology}★, Doubt Clarification: {fb.doubtClarification}★<br />
               Comments: {fb.comments}
             </li>
           ))}

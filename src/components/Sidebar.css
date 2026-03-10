@@ -32,3 +32,12 @@
   border-left-color: #282c34;
   font-weight: 600;
 }
+
+/* logout entry stands out */
+.sidebar li.logout {
+  color: #ff5656;
+}
+.sidebar li.logout:hover {
+  background: #3d4149;
+  color: #ff8a8a;
+}

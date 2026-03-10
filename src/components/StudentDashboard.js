@@ -1,7 +1,10 @@
 import React from 'react';
-
+import Header from "./Header";
 function StudentDashboard({ onNavigate }) {
   return (
+    <div className="dashboard-container">
+      <Header />
+      <div className="dashboard-content">
     <div className="dashboard">
       <h2>Student Dashboard</h2>
       <div className="dashboard-cards">
@@ -18,6 +21,8 @@ function StudentDashboard({ onNavigate }) {
           <p>See what other students think</p>
         </div>
       </div>
+    </div>
+    </div>
     </div>
   );
 }

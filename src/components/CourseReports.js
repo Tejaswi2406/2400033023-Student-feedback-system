@@ -12,8 +12,8 @@ function CourseReports({ selectedCourse, onSelectCourse, reports }) {
           <h3>Report for {selectedCourse}</h3>
           <p>Average Overall: {reports.overall.toFixed(1)}★</p>
           <p>Average Content: {reports.content.toFixed(1)}★</p>
-          <p>Average Instructor: {reports.instructor.toFixed(1)}★</p>
-          <p>Average Facilities: {reports.facilities.toFixed(1)}★</p>
+          <p>Average Teaching Methodology: {reports.teachingMethodology.toFixed(1)}★</p>
+          <p>Average Doubt Clarification: {reports.doubtClarification.toFixed(1)}★</p>
           {/* Add more analytics as needed */}
         </div>
       ) : (
